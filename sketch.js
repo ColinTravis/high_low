@@ -1,5 +1,5 @@
 // Number of Guesses
-var guessesLeft = 5
+var guessesLeft = 3
 // Guess Attempt
 var guess
 // Generate Winning number
@@ -47,15 +47,15 @@ function highLow(){
   if (guessesLeft > 0) {
     guessesLeft--;
     if (guess > numberWin) {
-      answer.html('too high')
+      answer.html('Definitely not that many..')
       console.log("too high");
       console.log(guessesLeft);
     } else if (guess < numberWin) {
-      answer.html('too low')
+      answer.html('Not Quite Enough')
       console.log("too low");
       console.log(guessesLeft);
     }else {
-      answer.html("Hey, cool you won.")
+      answer.html("2 but nobody knows how they got in there.")
       console.log("game win");
       return;
     }
@@ -80,7 +80,8 @@ function draw() {
 //   text("Try to guess the number of guesses you have.", windowWidth/1.7, windowHeight/1.25 , 200, 300);
 
   textSize(46)
-  textFont("Segoe UI");
+  textFont("Helvetica");
   fill(240)
-  text("Try to guess the number of guesses you have.", windowWidth/2, windowHeight/2 , 500, 500);
+  text("How many flies does it take to screw in a light bulb?", windowWidth/2, windowHeight/2 , 500, 500);
+
 }
