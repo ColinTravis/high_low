@@ -11,24 +11,26 @@ var input, button, answer
 function setup() {
   createCanvas(windowWidth,windowHeight)
   input = createInput();
-  input.position(windowWidth/2.2, windowHeight/2);
+  input.position(windowWidth/2.5, windowHeight/2);
 
   button = createButton('GUESS');
-  button.position(windowWidth/2.1, windowHeight/1.8);
+  button.position(windowWidth/2.2, windowHeight/1.8);
   // Actually run the guessing function
   button.mousePressed(playGuess)
 
-  answer = createElement('h2','Your answer is...')
+  answer = createElement('h2','The answer is...')
 
-  answer.position(windowWidth/2, windowHeight/1.5)
+  answer.position(windowWidth/3.5, windowHeight/1.5)
   rectMode(CENTER)
   textAlign(CENTER)
+  // var r = random(1,10)
 }
-
 
 // Randomizes the number
 function generateNumber() {
-  numberWin = Math.floor(Math.random()*10);
+  // numberWin = Math.floor(Math.random()*10);
+  // numberWin = r;
+  numberWin = 2
   console.log(numberWin);
 }
 
@@ -55,7 +57,7 @@ function highLow(){
       console.log("too low");
       console.log(guessesLeft);
     }else {
-      answer.html("2 but nobody knows how they got in there.")
+      answer.html("Correct! But nobody knows how they got in there.")
       console.log("game win");
       return;
     }
@@ -68,20 +70,9 @@ function highLow(){
 
 function draw() {
   background(62, 153, 135)
-//   strokeWeight(0)
-//   fill(215, 157, 79)
-//   rect(windowWidth/2,windowHeight/2,600,600);
-//   fill(77, 135, 240)
-// rect(windowWidth/2.4,windowHeight/1.5,200,200);
-// rect(windowWidth/1.7,windowHeight/1.5,200,200);
-//   fill(240)
-//   textSize(13)
-//   text("Try to guess the number of guesses you have.", windowWidth/2.4, windowHeight/1.25 , 200, 300);
-//   text("Try to guess the number of guesses you have.", windowWidth/1.7, windowHeight/1.25 , 200, 300);
 
   textSize(46)
   textFont("Helvetica");
   fill(240)
   text("How many flies does it take to screw in a light bulb?", windowWidth/2, windowHeight/2 , 500, 500);
-
 }

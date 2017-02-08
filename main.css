@@ -12,4 +12,5 @@ html,body {
 h2 {
   color: rgb(250, 250, 250);
   font-family: sans-serif;
+	text-align: center;
 }
